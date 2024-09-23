@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package schemaVersion="1.7.36" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Open-CMSIS-Pack/Open-CMSIS-Pack-Spec/v1.7.36/schema/PACK.xsd">
+  <name>NUCLEO-L476RG_BSP</name>
+  <vendor>Keil</vendor>
+  <description>STMicroelectronics STM32L4 Series NUCLEO-L476RG Board Support Pack</description>
+  <url>https://www.keil.com/pack/</url>
+  <repository type="git">https://github.com/Open-CMSIS-Pack/ST_NUCLEO-L476RG_BSP.git</repository>
+  <license>LICENSE</license>
+  <licenseSets>
+    <licenseSet id="all" default="true" gating="true">
+      <license name="LICENSE" title="Apache 2.0 open-source license" spdx="Apache-2.0"/>
+    </licenseSet>
+  </licenseSets>
+
+  <releases>
+    <release version="1.0.0-dev">
+      Prepared for new CMSIS-Toolbox CubeMX integration
+      Board description for NUCLEO-L476RG
+      Added Blinky example (CMSIS Solution)
+      Drivers:
+      - CMSIS-Driver VIO
+    </release>
+  </releases>
+
+  <keywords>
+    <!-- keywords for indexing -->
+    <keyword>ST</keyword>
+    <keyword>Board Support Pack</keyword>
+    <keyword>STM32L4</keyword>
+    <keyword>NUCLEO-L476RG</keyword>
+  </keywords>
+
+  <requirements>
+    <packages>
+      <package vendor="Keil" name="STM32L4xx_DFP"      version="3.0.0-0"/>
+      <package vendor="ARM"  name="CMSIS"              version="6.0.0-0"/>
+      <package vendor="ARM"  name="CMSIS-Driver_STM32" version="1.0.0-0"/>
+    </packages>
+  </requirements>
+
+  <conditions>
+    <!-- Board Condition -->
+    <condition id="NUCLEO-L476RG">
+      <description>STMicroelectronics NUCLEO-L476RG Board</description>
+      <require Bvendor="STMicroelectronics" Bname="NUCLEO-L476RG"/>
+    </condition>
+
+    <!-- Board Condition + CMSIS Driver GPIO-->
+    <condition id="NUCLEO-L476RG GPIO">
+      <description>STMicroelectronics NUCLEO-L476RG Board with CMSIS Driver GPIO</description>
+      <require condition="NUCLEO-L476RG"/>
+      <require Cclass="CMSIS Driver" Cgroup="GPIO"/>
+    </condition>
+  </conditions>
+
+  <components>
+    <!-- CMSIS VIO Driver component for NUCLEO-L476RG -->
+    <component Cclass="CMSIS Driver" Cgroup="VIO" Csub="Board" Cversion="1.0.0" Capiversion="1.0.0" condition="NUCLEO-L476RG GPIO">
+      <description>I/O implementation for NUCLEO-L476RG</description>
+      <RTE_Components_h>
+        #define RTE_VIO_BOARD
+        #define RTE_VIO_NUCLEO_L476RG
+      </RTE_Components_h>
+      <files>
+        <file category="source" name="CMSIS/Driver/vio_NUCLEO-L476RG.c"/>
+      </files>
+    </component>
+  </components>
+
+  <boards>
+    <!-- NUCLEO-L476RG -->
+    <board vendor="STMicroelectronics" name="NUCLEO-L476RG" revision="Rev.C"
+           salesContact="https://www.st.com/content/st_com/en/contact-us.html">
+      <description>STM32 Evaluation development board with STM32L476RGTx MCU</description>
+      <image small="Images/nucleo-l476rg_small.png"
+             large="Images/nucleo-l476rg_large.png" public="true"/>
+      <book category="overview"  name="https://www.st.com/en/evaluation-tools/nucleo-l476rg.html" title="NUCLEO-L476RG Board"/>
+      <book category="overview"  name="https://www.st.com/resource/en/data_brief/nucleo-l476rg.pdf" title="Data Brief"/>
+      <book category="manual"    name="https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf" title="User Manual"/>
+      <book category="schematic" name="https://www.st.com/resource/en/schematic_pack/mb1136-default-c03_schematic.pdf" title="Schematics"/>
+      <book category="other"     name="Documents/README.md" title="Guide"/>
+      <mountedDevice    deviceIndex="0" Dvendor="STMicroelectronics:13" Dname="STM32L476RGTx"/>
+      <compatibleDevice deviceIndex="0" Dvendor="STMicroelectronics:13" DsubFamily="STM32L476"/>
+      <feature type="ODbg"       n="1"              name="On-board ST-LINK/V2-1"/>
+      <feature type="PWR"        n="4"              name="USB VBUS, ext. VIN, ext. 5V, ext +3.3V"/>
+      <feature type="CustomFF"   n="2"              name="STMicroelectronics Morpho connector"/>
+      <feature type="ArduinoFF"  n="2"              name="STMicroelectronics Arduino connector"/>
+      <feature type="USB"        n="1"              name="USB re-enumeration capability"/>
+      <feature type="Button"     n="2"              name="Push-buttons: User and Reset"/>
+      <feature type="LED"        n="3"              name="LEDs: COM, Power, User LEDs"/>
+      <debugInterface adapter="ST-Link" connector="Mini-USB"/>
+      <debugProbe connector="Mini-USB" debugClock="10000000" debugLink="swd" name="ST-Link"/>
+    </board>
+  </boards>
+
+  <examples>
+    <example name="Blinky" folder="Examples/Blinky" doc="README.md">
+      <description>CMSIS-RTOS2 Blinky example with VIO</description>
+      <board name="NUCLEO-L476RG" vendor="STMicroelectronics"/>
+      <project>
+        <environment name="csolution" load="Blinky.csolution.yml"/>
+      </project>
+    </example>
+  </examples>
+</package>
