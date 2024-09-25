@@ -1,14 +1,16 @@
-# Overview
+# NUCLEO-L476RG Nucleo-64 board
+
+## Overview
 
 The STM32 Nucleo-64 board provides an affordable and flexible way for users to try out new concepts and build prototypes by choosing from the various combinations of performance and power consumption features, provided by the STM32 microcontroller. For the compatible boards, the internal or external SMPS significantly reduces power consumption in Run mode. The ARDUINO® Uno V3 connectivity support and the ST morpho headers allow the easy expansion of the functionality of the STM32 Nucleo open development platform with a wide choice of specialized shields.
 
 The STM32 Nucleo-64 board does not require any separate probe as it integrates the ST-LINK debugger/programmer.
 
-# Getting started
+## Getting started
 
 - [User manual](https://www.st.com/resource/en/user_manual/um2153-discovery-kit-for-iot-node-multichannel-communication-with-stm32l4-stmicroelectronics.pdf")
 
-## ST-LINK driver installation and firmware upgrade (on Microsoft Windows)
+### ST-LINK driver installation and firmware upgrade (on Microsoft Windows)
 
 1. Download the latest [ST-LINK driver](https://www.st.com/en/development-tools/stsw-link009.html).
 2. Extract the archive and run `dpinst_amd64.exe`. Follow the displayed instructions.
@@ -19,7 +21,7 @@ The STM32 Nucleo-64 board does not require any separate probe as it integrates t
 7. When the ST-LINK driver is correctly installed, the current ST-LINK version is displayed.
 8. Press the **Yes >>>>** button to start the firmware upgrade process.
 
-# Technical reference
+## Technical reference
 
 - [STM32L476 microcontroller](https://www.st.com/en/microcontrollers-microprocessors/stm32l476rg.html)
 - [NUCLEO-L476RG board](https://www.st.com/en/evaluation-tools/nucleo-l476rg.html)

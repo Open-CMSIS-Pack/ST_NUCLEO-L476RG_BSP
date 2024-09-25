@@ -83,8 +83,6 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
-  /* USER CODE BEGIN SysInit */
   SystemCoreClockUpdate();
   /* USER CODE END SysInit */
 

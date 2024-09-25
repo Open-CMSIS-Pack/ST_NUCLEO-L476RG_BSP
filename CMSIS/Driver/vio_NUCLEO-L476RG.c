@@ -27,9 +27,9 @@
 
 The table below lists the physical I/O mapping of this CMSIS-Driver VIO implementation.
 
-Virtual Resource  | Variable       | Physical Resource on NUCLEO-L476RG         |
-:-----------------|:---------------|:-------------------------------------------|
-vioBUTTON0        | vioSignalIn.0  | PC13: Button USER                          |
+| Virtual I/O   | Variable       | Board component      | Pin
+|:--------------|:---------------|:---------------------|:------
+| vioBUTTON0    | vioSignalIn.0  | USER button (B1)     | PC13
 */
 
 #include "cmsis_vio.h"

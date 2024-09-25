@@ -2,7 +2,7 @@
 <package schemaVersion="1.7.36" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Open-CMSIS-Pack/Open-CMSIS-Pack-Spec/v1.7.36/schema/PACK.xsd">
   <name>NUCLEO-L476RG_BSP</name>
   <vendor>Keil</vendor>
-  <description>STMicroelectronics STM32L4 Series NUCLEO-L476RG Board Support Pack</description>
+  <description overview="Documentation/OVERVIEW.md">STMicroelectronics STM32L4 Series NUCLEO-L476RG Board Support Pack</description>
   <url>https://www.keil.com/pack/</url>
   <repository type="git">https://github.com/Open-CMSIS-Pack/ST_NUCLEO-L476RG_BSP.git</repository>
   <license>LICENSE</license>
@@ -71,7 +71,7 @@
     <!-- NUCLEO-L476RG -->
     <board vendor="STMicroelectronics" name="NUCLEO-L476RG" revision="Rev.C"
            salesContact="https://www.st.com/content/st_com/en/contact-us.html">
-      <description>STM32 Evaluation development board with STM32L476RGTx MCU</description>
+      <description>STM32 Nucleo-64 development board with STM32L476RGTx MCU</description>
       <image small="Images/nucleo-l476rg_small.png"
              large="Images/nucleo-l476rg_large.png" public="true"/>
       <book category="overview"  name="https://www.st.com/en/evaluation-tools/nucleo-l476rg.html" title="NUCLEO-L476RG Board"/>
@@ -81,13 +81,13 @@
       <book category="other"     name="Documents/README.md" title="Guide"/>
       <mountedDevice    deviceIndex="0" Dvendor="STMicroelectronics:13" Dname="STM32L476RGTx"/>
       <compatibleDevice deviceIndex="0" Dvendor="STMicroelectronics:13" DsubFamily="STM32L476"/>
-      <feature type="ODbg"       n="1"              name="On-board ST-LINK/V2-1"/>
-      <feature type="PWR"        n="4"              name="USB VBUS, ext. VIN, ext. 5V, ext +3.3V"/>
-      <feature type="CustomFF"   n="2"              name="STMicroelectronics Morpho connector"/>
-      <feature type="ArduinoFF"  n="2"              name="STMicroelectronics Arduino connector"/>
-      <feature type="USB"        n="1"              name="USB re-enumeration capability"/>
-      <feature type="Button"     n="2"              name="Push-buttons: User and Reset"/>
-      <feature type="LED"        n="3"              name="LEDs: COM, Power, User LEDs"/>
+      <feature type="ODbg"      n="1"              name="On-board ST-LINK/V2-1"/>
+      <feature type="PWR"       n="4"              name="USB VBUS, ext. VIN, ext. 5V, ext +3.3V"/>
+      <feature type="CustomFF"  n="2"              name="STMicroelectronics Morpho connector"/>
+      <feature type="ArduinoFF" n="2"              name="STMicroelectronics Arduino connector"/>
+      <feature type="USB"       n="1"              name="USB re-enumeration capability"/>
+      <feature type="Button"    n="2"              name="Push-buttons: User and Reset"/>
+      <feature type="LED"       n="3"              name="LEDs: COM, Power, User LEDs"/>
       <debugInterface adapter="ST-Link" connector="Mini-USB"/>
       <debugProbe connector="Mini-USB" debugClock="10000000" debugLink="swd" name="ST-Link"/>
     </board>
