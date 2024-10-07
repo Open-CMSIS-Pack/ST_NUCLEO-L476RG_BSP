@@ -17,7 +17,7 @@
       Prepared for new CMSIS-Toolbox CubeMX integration
       Board description for NUCLEO-L476RG
       Blinky example (CMSIS Solution)
-      Drivers:
+      CMSIS Drivers:
       - CMSIS-Driver VIO
     </release>
   </releases>
