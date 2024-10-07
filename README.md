@@ -8,8 +8,6 @@ This is the development repository for the **STMicroelectronics NUCLEO-L476RG Bo
 
 This BSP uses the generator integration of the [CMSIS-Toolbox to Configure STM32 Devices with CubeMX](https://github.com/Open-CMSIS-Pack/cmsis-toolbox/blob/main/docs/CubeMX.md) that is also supported in µVision 5.40 and higher.
 
-> **Note:** This is currently Work in Progress. Final release is expected in Q3'2024.
-
 ## Repository top-level structure
 
 Directory                   | Description
