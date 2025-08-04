@@ -14,8 +14,10 @@
   </licenseSets>
 
   <releases>
-    <release version="1.0.1-dev">
+    <release version="1.0.2-dev">
       Active development ...
+      CMSIS Driver:
+      - VIO: Added support for LED LD2
       Blinky project:
       - specify thread names using thread attributes
       - rename thread IDs
@@ -64,7 +66,7 @@
 
   <components>
     <!-- CMSIS VIO Driver component for NUCLEO-L476RG -->
-    <component Cclass="CMSIS Driver" Cgroup="VIO" Csub="Board" Cversion="1.0.0" Capiversion="1.0.0" condition="NUCLEO-L476RG GPIO">
+    <component Cclass="CMSIS Driver" Cgroup="VIO" Csub="Board" Cversion="1.1.0" Capiversion="1.0.0" condition="NUCLEO-L476RG GPIO">
       <description>I/O implementation for NUCLEO-L476RG</description>
       <RTE_Components_h>
         #define RTE_VIO_BOARD
