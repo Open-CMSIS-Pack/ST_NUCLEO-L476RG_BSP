@@ -1,5 +1,5 @@
 // File: STM32L4x5_4x6.dbgconf
-// Version: 1.0.0
+// Version: 1.0.1
 // Note: refer to STM32L4x5 and STM32L4x6 Reference manual (RM0351)
 //       refer to STM32L475xx STM32L476xx STM32L486xx STM32L496xx STM32L4A6xx datasheets
 
@@ -30,14 +30,14 @@ DbgMCU_CR = 0x00000007;
 //   <o.1>  DBG_TIM3_STOP            <i> TIM3 counter stopped when core is halted
 //   <o.0>  DBG_TIM2_STOP            <i> TIM2 counter stopped when core is halted
 // </h>
-DbgMCU_APB1_Fz1 = 0x00000000;
+DbgMCU_APB1_Fz1 = 0x86E0183F;
 
 // <h> Debug MCU APB1 freeze register 2 (DBGMCU_APB1FZR2)
 //                                   <i> Reserved bits must be kept at reset value
 //   <o.5>  DBG_LPTIM2_STOP          <i> LPTIM2 counter stopped when core is halted
 //   <o.1>  DBG_I2C4_STOP            <i> I2C4 SMBUS timeout counter stopped when core is halted
 // </h>
-DbgMCU_APB1_Fz2 = 0x00000000;
+DbgMCU_APB1_Fz2 = 0x00000022;
 
 // <h> Debug MCU APB2 freeze register (DBGMCU_APB2FZR)
 //                                   <i> Reserved bits must be kept at reset value
@@ -47,7 +47,7 @@ DbgMCU_APB1_Fz2 = 0x00000000;
 //   <o.13> DBG_TIM8_STOP            <i> TIM8 counter stopped when core is halted
 //   <o.11> DBG_TIM1_STOP            <i> TIM1 counter stopped when core is halted
 // </h>
-DbgMCU_APB2_Fz = 0x00000000;
+DbgMCU_APB2_Fz = 0x00072800;
 
 // <h> TPIU Pin Routing (TRACECLK fixed on Pin PE2)
 //   <i> TRACECLK: Pin PE2
