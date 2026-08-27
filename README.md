@@ -1,6 +1,6 @@
-[![Version](https://img.shields.io/github/v/release/Open-CMSIS-Pack/ST_NUCLEO-L476RG_BSP)](https://github.com/Open-CMSIS-Pack/ST_NUCLEO-L476RG_BSP/releases/latest)
-[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-green?label)](https://github.com/Open-CMSIS-Pack/ST_NUCLEO-L476RG_BSP/blob/main/LICENSE-Apache-2.0)
-[![License: BSD-3-Clause](https://img.shields.io/badge/License-BSD--3--Clause-green?label)](https://github.com/Open-CMSIS-Pack/ST_NUCLEO-L476RG_BSP/blob/main/LICENSE-BSD-3-Clause)
+[![Version](https://img.shields.io/github/v/release/Open-CMSIS-Pack/ST_NUCLEO-L476RG_BSP?label=Release)](https://github.com/Open-CMSIS-Pack/ST_NUCLEO-L476RG_BSP/releases/latest)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-green?label=License)](https://github.com/Open-CMSIS-Pack/ST_NUCLEO-L476RG_BSP/blob/main/LICENSE-Apache-2.0)
+[![License: BSD-3-Clause](https://img.shields.io/badge/License-BSD--3--Clause-green?label=License)](https://github.com/Open-CMSIS-Pack/ST_NUCLEO-L476RG_BSP/blob/main/LICENSE-BSD-3-Clause)
 [![Examples Build Test](https://img.shields.io/github/actions/workflow/status/Open-CMSIS-Pack/ST_NUCLEO-L476RG_BSP/Test-Examples.yml?logo=arm&logoColor=0091bd&label=Examples%20Build%20Test)](./.ci)
 
 # ST_NUCLEO-L476RG_BSP
@@ -35,7 +35,7 @@ Run this script locally with:
 
       ST_NUCLEO-L476RG_BSP $ ./gen_pack.sh
 
-### GitHub Actions
+## GitHub Actions
 
 The repository uses GitHub Actions to generate the pack and build examples:
 
